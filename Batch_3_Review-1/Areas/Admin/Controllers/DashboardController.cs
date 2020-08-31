@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Batch_3_Review_1.Areas.Admin.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Batch_3_Review_1.Areas.Admin.Controllers
@@ -11,7 +12,8 @@ namespace Batch_3_Review_1.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var model = new DashboardModel();
+            return View(model);
         }
     }
 }

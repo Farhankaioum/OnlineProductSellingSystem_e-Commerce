@@ -60,6 +60,8 @@ namespace Batch_3_Review_1
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.AddHttpContextAccessor();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddOptions();

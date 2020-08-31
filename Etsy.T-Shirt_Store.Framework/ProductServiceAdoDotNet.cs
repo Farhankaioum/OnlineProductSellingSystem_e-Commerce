@@ -10,6 +10,11 @@ namespace Etsy.T_Shirt_Store.Framework
     {
         private readonly string _connectionString;
 
+        public ProductServiceAdoDotNet()
+        {
+
+        }
+
         public ProductServiceAdoDotNet(string connectionString)
         {
             _connectionString = connectionString;

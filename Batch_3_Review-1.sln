@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etsy.T-Shirt_Store.Web", "Batch_3_Review-1\Etsy.T-Shirt_Store.Web.csproj", "{A7D96317-9A9E-412F-8E0E-AF6E536A0D62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Etsy.T-Shirt_Store.Web", "Batch_3_Review-1\Etsy.T-Shirt_Store.Web.csproj", "{A7D96317-9A9E-412F-8E0E-AF6E536A0D62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etsy.T-Shirt_Store.Data", "Etsy.T-Shirt_Store.Data\Etsy.T-Shirt_Store.Data.csproj", "{38D044A5-237B-4117-8621-13D8E553B7B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Etsy.T-Shirt_Store.Data", "Etsy.T-Shirt_Store.Data\Etsy.T-Shirt_Store.Data.csproj", "{38D044A5-237B-4117-8621-13D8E553B7B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etsy.T-Shirt_Store.Framework", "Etsy.T-Shirt_Store.Framework\Etsy.T-Shirt_Store.Framework.csproj", "{F5B4407E-14D9-4486-B7E5-0354647F4C24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{38D044A5-237B-4117-8621-13D8E553B7B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38D044A5-237B-4117-8621-13D8E553B7B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38D044A5-237B-4117-8621-13D8E553B7B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B4407E-14D9-4486-B7E5-0354647F4C24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B4407E-14D9-4486-B7E5-0354647F4C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B4407E-14D9-4486-B7E5-0354647F4C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B4407E-14D9-4486-B7E5-0354647F4C24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,130 @@
+﻿@model ProductIndexModel
+
+@{
+
+}
+
+@section PageStyle1{
+
+    <link href="~/Admin/plugins/datatables-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>DataTables</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">DataTables</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Product List with Properties</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table id="productTable-1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Category</th>
+                                            <th>Price</th>
+                                            <th>Color</th>
+                                            <th>Available</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Category</th>
+                                            <th>Price</th>
+                                            <th>Color</th>
+                                            <th>Available</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+@section Script1{
+
+    <!-- DataTables -->
+    <script src="/admin/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+
+    <!-- Page Script-->
+    <script>
+        $(function () {
+            $('#productTable-1').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": "/Admin/Product/GetProducts",
+                "columnDefs": [
+                    {
+                        "orderable": false,
+                        "targets": 5,
+                        "render": function (data, type, row) {
+                            return `<button type="submit" class="btn btn-info btn-sm"
+                                        onclick = "window.location.href='/Admin/Product/editbook/${data}'" value = '${data}' >
+                                            <i class="fas fa-pencil-alt"></i>
+                                        Edit
+                                        </button >
+                                            <button type="submit" class="btn btn-danger btn-sm show-bs-modal" href="#"
+                                            data-id='${data}' value='${data}'>
+                                            <i class="fas fa-trash"></i>
+                                            Delete
+                                            </button>`;
+                        }
+                    }
+                ]
+            });
+
+            //$('#productTable-1').on('click', '.show-bs-modal', function (event) {
+            //    var id = $(this).data("id");
+            //    var modal = $("#modal-default");
+            //    modal.find('.modal-body p').text('Are you sure you want to delete this record?')
+            //    //$("#deleteForm").attr("action", "/admin/category/delete/" + id );
+            //    $("#deleteId").val(id);
+            //    modal.modal('show');
+            //});
+
+            //$("#deleteButton").click(function () {
+            //    $("#deleteForm").submit();
+            //});
+
+        });
+
+    </script>
+}

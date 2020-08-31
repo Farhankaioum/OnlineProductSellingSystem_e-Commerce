@@ -19,4 +19,9 @@
     <Folder Include="Areas\Admin\Data\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Etsy.T-Shirt_Store.Data\Etsy.T-Shirt_Store.Data.csproj" />
+    <ProjectReference Include="..\Etsy.T-Shirt_Store.Framework\Etsy.T-Shirt_Store.Framework.csproj" />
+  </ItemGroup>
+
 </Project>

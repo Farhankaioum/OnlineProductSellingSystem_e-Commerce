@@ -12,6 +12,9 @@ using Batch_3_Review_1.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Etsy.T_Shirt_Store.Data;
+using Batch_3_Review_1.Areas.Admin.Models;
+using Etsy.T_Shirt_Store.Framework;
 
 namespace Batch_3_Review_1
 {
@@ -22,7 +25,7 @@ namespace Batch_3_Review_1
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public  IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -31,6 +34,12 @@ namespace Batch_3_Review_1
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            // registration service
+            //services.AddScoped<IProductService, ProductServiceAdoDotNet>();
+
+
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

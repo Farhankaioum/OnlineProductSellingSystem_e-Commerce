@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Etsy.T_Shirt_Store.Framework</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Etsy.T-Shirt_Store.Data\Etsy.T-Shirt_Store.Data.csproj" />
+  </ItemGroup>
+
+</Project>
